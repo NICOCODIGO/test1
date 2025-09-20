@@ -138,7 +138,7 @@ header {
   z-index: -1;           /* overlay above the image */
 }
 
-#hero {
+#hero { /* this hero is only for the home page*/
   position: relative;
   min-height: 400px;
   display: flex;
@@ -693,7 +693,8 @@ newsletter-form button {
   background: var(--card-bg);
   border: 1px solid rgba(0, 0, 0, .05);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   padding: 28px 24px;
 }
 
@@ -856,20 +857,22 @@ newsletter-form button {
 /* ----- OUR BREADS PAGE ----- */
 /* Breads hero base */
 #breads-hero {
+  margin: 0;                /* remove the white bar */
+  border-radius: 0;         /* kill the curve */
+  overflow: hidden;         /* clean edges */
+  box-shadow: none;         /* no card shadow on a full-bleed hero */
   position: relative;
-  color: #fff;
-  min-height: 48vh;           /* smaller than index hero */
-  display: grid;
-  place-items: center;
-  padding: 32px 16px;
-  overflow: hidden;
 }
 
 /* background image */
 #breads-hero .hero-bg {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
+  display: block;
+  position: absolute; 
+  inset: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
   z-index: -2;
 }
 
@@ -947,7 +950,9 @@ newsletter-form button {
 .menu-card-body p { margin:0; color:var(--ink-700); }
 .price { margin-top:4px; font-weight:800; color:var(--brand-brown); }
 
-/* ----- Location page hero & layout ----- */
+
+
+/* ----- Location page hero & layout (THIS APPLIES TO ALL HERO) ----- */
 .section-hero-lite {
   position: relative;
   min-height: clamp(220px, 28vh, 340px); /* smaller height */
@@ -957,9 +962,9 @@ newsletter-form button {
   color: #fff;
   overflow: hidden;
   padding: 32px 16px;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  margin-bottom: 24px;
+  
 
   /* override old cream/white gradient so photo can show */
   background: none;
@@ -1040,11 +1045,16 @@ newsletter-form button {
 /* Glassy cards for map + hours */
 .map-card,
 .hours-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 0 0 3px var(--brand-amber),
+  0 10px 28px rgba(0,0,0,.08);
   background: rgba(255,255,255,.88);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  box-shadow:  0 0 3px var(--brand-amber),   
+    0 10px 28px rgba(0,0,0,.08);
   padding: 18px;
 }
 
