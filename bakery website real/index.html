@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pan Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div class="logo-wrapper">
+        <img id="logo" src="img/bread.svg" alt="Pan Bakery Logo" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="menu.html">Menu</a>
+            <ul class="dropdown-content">
+              <li><a href="#cakes">Cakes</a></li>
+              <li><a href="#beverage">Beverage</a></li>
+              <li><a href="#coffee">Coffee</a></li>
+              <li><a href="#sandwiches">Breakfast</a></li>
+            </ul>
+          </li>
+          <li><a href="breads.html">Our breads</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- HERO -->
+  <section id="hero" aria-labelledby="hero-title">
+    <img src="img/backgroundbread.jpg" alt="background bread photo" class="hero-bg" aria-hidden="true" loading="eager" decoding="async">
+    <div class="hero-scrim"></div>
+    <div class="hero-inner">
+      <div class="hero-card">
+        <h1 id="hero-title">Welcome to Pan Bakery!</h1>
+        <p class="hero-sub">Start Your Day With Freshly Baked Breads</p>
+        <p class="hero-lede">
+          Join us and taste the difference — traditional recipes, artisan quality.
+        </p>
+        <div class="hero-badges">
+          <span class="badge hours">Open Daily • 7 AM–12 AM</span>
+          <span class="chip">Family-Owned</span>
+          <span class="chip">Small Batch</span>
+          <span class="chip">Locally Sourced</span>
+        </div>
+        <div class="hero-cta">
+          <a href="https://www.doordash.com/" target="_blank" class="noopener">
+            <img src="img/DoorDash.webp" alt="Order on DoorDash" class="delivery logo"/>
+          </a>
+          <a href="https://www.ubereats.com/" target="_blank" class="noopener">
+            <img src="img/uber-eats--v2.png" alt="Order on UberEats" class="delivery logo"/>
+          </a>
+          <a href="https://www.grubhub.com/" target="_blank" class="noopener">
+            <img src="img/Microsoft.VisualStudio.Services.Icons.png" alt="Order on grubhub" class="delivery logo"/>
+          </a>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-cue" aria-label="Scroll to About" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      ⌄
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="about-card">
+      <h2 id="about-heading" class="about-title">About Us</h2>
+      <p class="about-lede">
+        Founded with a passion for baking, Pan Bakery brings the best of global bread recipes to your table.
+      </p>
+      <ul class="about-list">
+        <li>Daily bakes from scratch using locally sourced ingredients</li>
+        <li>Family recipes passed down for generations</li>
+        <li>Small-batch, artisan techniques for exceptional flavor</li>
+      </ul>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Family Recipes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Breakfast & Lunch</span>
+          <span class="stat-label">Serving all day</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Fresh</span>
+          <span class="stat-label">Baked Every Morning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Our Favorites</h2>
+    <p class="gallery-lede">
+      We love crafting our food with care — from fresh-baked breads to 
+      all-day breakfast and lunch favorites, everything is made to delight you.
+    </p>
+    <div class="gallery-grid">
+      <article class="gallery-card">
+        <img src="img/allbread.jpg" alt="Freshly baked bread" loading="lazy">
+        <h3>Breads</h3>
+        <p>Freshly baked loaves and rolls every morning.</p>
+      </article>
+      <article class="gallery-card">
+        <img src="img/break:lunch.webp" alt="Breakfast sandwich" loading="lazy">
+        <h3>Breakfast & Lunch</h3>
+        <p>Sandwiches and pastries made to order.</p>
+      </article>
+      <article class="gallery-card">
+        <img src="img/beverage.png" alt="Latte art" loading="lazy">
+        <h3>Beverages</h3>
+        <p>Hot coffee and refreshing cold drinks.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CAKES -->
+  <section id="cakes" aria-labelledby="cakes-heading" class="section-white-to-cream">
+    <h2 id="cakes-heading">Our Cakes</h2>
+    <p class="cake-lede">
+      From birthdays to weddings, we craft every cake with love, artistry, 
+      and the finest ingredients. Custom orders welcome!
+    </p>
+    <div class="cake-grid">
+      <article class="cake-card">
+        <img src="img/choclatecake.jpg.webp" alt="Chocolate cake" class="cake-img" loading="lazy" />
+        <h3>Chocolate Fudge</h3>
+        <p>Rich layers of chocolate sponge and silky fudge frosting.</p>
+      </article>
+      <article class="cake-card">
+        <img src="img/VanillaCake.jpg" alt="Vanilla cake" class="cake-img" loading="lazy" />
+        <h3>Vanilla Celebration</h3>
+        <p>Classic vanilla sponge topped with buttercream roses.</p>
+      </article>
+      <article class="cake-card">
+        <img src="img/redvelvet.webp" alt="Red velvet cake" class="cake-img" loading="lazy" />
+        <h3>Red Velvet</h3>
+        <p>Moist red velvet with cream cheese frosting — a favorite!</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <h2 id="reviews-heading">What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-head">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="author">Alex M.</p>
+          </div>
+        </div>
+        <blockquote class="quote">The best service I’ve ever experienced!</blockquote>
+      </article>
+      <article class="review-card">
+        <div class="review-head">
+          <div>
+            <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <p class="author">Sarah K.</p>
+          </div>
+        </div>
+        <blockquote class="quote">Fast, reliable, and friendly support.</blockquote>
+      </article>
+      <article class="review-card">
+        <div class="review-head">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="author">John D.</p>
+          </div>
+        </div>
+        <blockquote class="quote">Great value for the price, highly recommend.</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" aria-labelledby="newsletter-heading">
+    <div class="newsletter-card">
+      <h2 id="newsletter-heading" class="newsletter-title">Subscribe to Our Newsletter</h2>
+      <p class="newsletter-lede">Get the latest updates on new breads and special offers.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer" aria-labelledby="footer-heading">
+    <div class="footer-card">
+      <h2 id="footer-heading" class="footer-title">Get in Touch</h2>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3 class="footer-subtitle">Contact</h3>
+          <ul class="footer-list">
+            <li><strong>Phone:</strong> <a href="tel:+12014477100">(201) 447-7100</a></li>
+            <li><strong>Address:</strong><br>
+              Bergen Community College<br>
+              400 Paramus Rd<br>
+              Paramus, NJ 07652
+            </li>
+            <li><strong>Email:</strong> <a href="mailto:PanBakery@gmail.com">PanBakery@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-subtitle">Follow Us</h3>
+          <div class="social-icons" role="list">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="img/instagram.svg.webp" alt="Instagram" class="social-icon" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="img/facebook.svg.webp" alt="Facebook" class="social-icon" />
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <img src="img/xlogo.png" alt="X" class="social-icon" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-subtitle">We Accept</h3>
+          <div class="payment-logos">
+            <img src="img/americanexpress.png" alt="American Express" class="payment-logo amex" />
+            <img src="img/visa.png" alt="Visa" class="payment-logo" />
+            <img src="img/mastercard.png" alt="Mastercard" class="payment-logo" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pan Bakery. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
+      <div class="credits">
+        <p>NICOCODIGO @ GITHUB</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

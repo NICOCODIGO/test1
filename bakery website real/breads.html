@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pan Bakery – Our Breads</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-wrapper">
+        <img id="logo" src="img/bread.svg" alt="Pan Bakery Logo" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="menu.html">Menu <span aria-hidden="true">▼</span></a>
+            <ul class="dropdown-content">
+              <li><a href="#cakes">Cakes</a></li>
+              <li><a href="#beverage">Beverage</a></li>
+              <li><a href="#coffee">Coffee</a></li>
+              <li><a href="#sandwiches">Breakfast</a></li>
+            </ul>
+          </li>
+          <li><a href="breads.html" class="active">Our breads</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- BREADS HERO -->
+<section id="breads-hero" aria-labelledby="hero-title">
+  <!-- background image -->
+  <img src="img/oven.webp" alt="Fresh artisan loaves stacked on rustic wooden shelves" class="hero-bg">
+
+  <!-- overlay -->
+  <div class="hero-scrim"></div>
+
+  <div class="hero-inner">
+    <div class="hero-card">
+      <h1 id="hero-title">Our Breads</h1>
+      <p class="hero-sub">Baked fresh every morning — small batch, big flavor.</p>
+      <p class="hero-lede">
+        From crusty sourdough to buttery croissants, our bakers use traditional methods, local ingredients, 
+        and plenty of passion to bring you breads that feel like home.
+      </p>
+      <p class="hero-lede">
+        Explore our artisan loaves, sweet pastries, and savory classics — all crafted with care.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Artisan -->
+  <section id="artisan" class="menu-section section-cream-to-white" aria-labelledby="artisan-h">
+    <h2 id="artisan-h" class="menu-title">Artisan Loaves</h2>
+    <div class="menu-grid">
+      <article class="menu-card" data-badge="BESTSELLER">
+        <img src="img/sourdough.jpg" alt="Sourdough loaf" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Sourdough</h3>
+          <div class="meta">
+            <span class="tag">16h ferment</span>
+            <span class="tag">Crusty</span>
+          </div>
+          <p>Slow-fermented with a crackly crust and tangy crumb.</p>
+          <span class="price">$6.50</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="img/ciabatta.jpg" alt="Ciabatta bread" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Ciabatta</h3>
+          <p>Light, airy interior — perfect for sandwiches.</p>
+          <span class="price">$5.50</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="img/baguette.webp" alt="French baguette" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Baguette</h3>
+          <p>Golden crust with soft, open crumb.</p>
+          <span class="price">$3.25</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sweet -->
+  <section id="sweet" class="menu-section section-white-to-cream" aria-labelledby="sweet-h">
+    <h2 id="sweet-h" class="menu-title">Sweet Breads & Pastries</h2>
+    <div class="menu-grid">
+      <article class="menu-card" data-badge="NEW">
+        <img src="img/cinnamon.jpg" alt="Cinnamon roll" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Cinnamon Roll</h3>
+          <p>Warm spice, rich icing — best with coffee.</p>
+          <span class="price">$3.50</span>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="img/bananaroll.jpg" alt="Banana bread" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Banana Bread</h3>
+          <p>Moist loaf with toasted walnuts.</p>
+          <span class="price">$4.25</span>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="img/butterCroissant.jpg" alt="Butter croissant" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Butter Croissant</h3>
+          <p>Flaky layers, buttery finish.</p>
+          <span class="price">$3.25</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Savory -->
+  <section id="savory" class="menu-section section-cream-to-white" aria-labelledby="savory-h">
+    <h2 id="savory-h" class="menu-title">Savory</h2>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="img/garlic.webp" alt="Garlic knots" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Garlic Knots</h3>
+          <p>Brushed with herb butter & parmesan.</p>
+          <span class="price">$4.00</span>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="img/focaccia.jpg" alt="Focaccia" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Focaccia</h3>
+          <p>Olive oil, rosemary, sea salt.</p>
+          <span class="price">$5.75</span>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="img/pretzel.jpg" alt="Soft pretzel" loading="lazy">
+        <div class="menu-card-body">
+          <h3>Soft Pretzel</h3>
+          <p>Chewy, salted, served warm.</p>
+          <span class="price">$3.00</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="site-footer" aria-labelledby="footer-heading">
+    <div class="footer-card">
+      <h2 id="footer-heading" class="footer-title">Get in Touch</h2>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3 class="footer-subtitle">Contact</h3>
+          <ul class="footer-list">
+            <li><strong>Phone:</strong> <a href="tel:+12014477100">(201) 447-7100</a></li>
+            <li><strong>Address:</strong><br>
+              Bergen Community College<br>
+              400 Paramus Rd<br>
+              Paramus, NJ 07652
+            </li>
+            <li><strong>Email:</strong> <a href="mailto:PanBakery@gmail.com">PanBakery@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-subtitle">Follow Us</h3>
+          <div class="social-icons" role="list">
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg.webp" alt="Instagram" class="social-icon" /></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg.webp" alt="Facebook" class="social-icon" /></a>
+            <a href="https://x.com/" target="_blank"><img src="img/xlogo.png" alt="X" class="social-icon" /></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-subtitle">We Accept</h3>
+          <div class="payment-logos">
+            <img src="img/americanexpress.png" alt="American Express" class="payment-logo amex" />
+            <img src="img/visa.png" alt="Visa" class="payment-logo" />
+            <img src="img/mastercard.png" alt="Mastercard" class="payment-logo" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pan Bakery. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </div>
+      <div class="credits">
+        <p>NICOCODIGO @ GITHUB</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+    </div> <!-- close footer card -->
+</footer>
+
+
+ 
