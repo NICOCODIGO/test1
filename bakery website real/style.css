@@ -440,6 +440,7 @@ gallery-card p {
 
 /* ===== CAKE SHOWCASE ===== */
 #cakes {
+  background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
   padding: 64px 20px;
   text-align: center;
 }
@@ -515,7 +516,7 @@ gallery-card p {
 
 /* =================== REVIEWS  ==========================*/
 #reviews {
-  background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
+  background: linear-gradient(180deg, #fff7e0 0%, #fff 100%);
   padding: 64px 20px;
 }
 
@@ -603,7 +604,7 @@ gallery-card p {
 
 /*============== NEWSLETTER========================= */
 #newsletter {
-  background: linear-gradient(180deg, #fff7e0 0%, #fff 100%);
+  background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
   padding: 64px 20px;
   color: var(--ink-900);
 }
@@ -679,8 +680,8 @@ newsletter-form button {
 }
 
 /* ==================/* FOOTER ============================================= */
-#site-footer { /* matches About/Reviews look */
-  background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
+#site-footer { 
+  background: linear-gradient(180deg, #fff7e0 0%, #fff 100%); /* matches About/Reviews look */
   padding: 64px 20px;
   color: var(--ink-900);
 }
