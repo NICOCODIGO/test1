@@ -25,7 +25,8 @@ header {
   top: 0;
   width: 100%;
   z-index: 999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
 }
 
 .header-content {
@@ -280,7 +281,8 @@ header {
   background: var(--card-bg);
   border: 1px solid rgba(0, 0, 0, .05);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   padding: 28px 24px;
   text-align: left;
   position: relative;
@@ -395,7 +397,8 @@ header {
   background: var(--card-bg);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   border: 1px solid rgba(0,0,0,.04);
   text-align: center;
   padding-bottom: 16px;
@@ -436,22 +439,21 @@ header {
 
 
 
-/* CAKES SHWCASE */
+/* CAKES HOME PAGE SHWCASE */
 
-/* ===== CAKE SHOWCASE ===== */
-#cakes {
+#cakeshome {
   background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
   padding: 64px 20px;
   text-align: center;
 }
 
-#cakes h2 {
+#cakeshome h2 {
   font-family: 'Courgette', 'Georgia', serif;
   font-size: 2rem;
   margin: 0 0 16px;
 }
 
-#cakes h2::after {
+#cakeshome h2::after {
   content: "";
   display: block;
   width: 72px;
@@ -489,7 +491,8 @@ header {
   border-radius: 14px;
   padding: 20px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   border: 1px solid rgba(0, 0, 0, .04);
 }
 
@@ -564,7 +567,8 @@ header {
   border-radius: 14px;
   padding: 20px;
   text-align: left;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   border: 1px solid rgba(0, 0, 0, .04);
 }
 
@@ -615,7 +619,8 @@ header {
   background: var(--card-bg);
   border: 1px solid rgba(0, 0, 0, .05);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
   padding: 32px 24px;
   text-align: center;
   position: relative;
@@ -680,31 +685,64 @@ header {
 }
 
 /* ==================/* FOOTER ============================================= */
-#site-footer { 
-  background: linear-gradient(180deg, #fff7e0 0%, #fff 100%); /* matches About/Reviews look */
+#site-footer {
+  position: relative;
+  overflow: hidden;
+  background: none;                 /* show the photo */
   padding: 64px 20px;
   color: var(--ink-900);
 }
 
-
-.footer-card {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 0, 0, .05);
-  border-radius: 16px;
-  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
-    0 10px 28px rgba(0,0,0,.08);
-  padding: 28px 24px;
+/* Full-bleed photo sourced from HTML */
+#site-footer .footer-bg {
+  position: absolute;
+  inset: -1px;                      /* hides tiny seams */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;          /* tweak if needed: center 30% */
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(.9) saturate(1.05);
 }
 
+/* Soft scrim for readability on busy photos */
+#site-footer::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.10) 0%,
+    rgba(0,0,0,.28) 100%
+  );
+}
+
+/* Card on top of photo */
+.footer-card {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.90);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow:
+    0 0 0 3px var(--brand-amber),   /* amber ring */
+    0 10px 28px rgba(0,0,0,.08);
+}
+
+/* Title + underline */
 .footer-title {
   font-family: 'Courgette', 'Georgia', serif;
   font-size: 2rem;
   margin: 0 0 18px;
   text-align: center;
 }
-
 .footer-title::after {
   content: "";
   display: block;
@@ -715,36 +753,25 @@ header {
   margin: 8px auto 0;
 }
 
+/* Columns */
 .footer-columns {
   display: grid;
   grid-template-columns: 1fr;
   gap: 22px;
 }
-
 @media (min-width: 720px) {
-  .footer-columns {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .footer-columns { grid-template-columns: repeat(3, 1fr); }
 }
-
 .footer-col { text-align: left; }
+.footer-subtitle { font-weight: 800; margin: 0 0 10px; }
 
-.footer-subtitle {
-  font-weight: 800;
-  margin: 0 0 10px;
-}
-
+/* Lists + links */
 .footer-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
-.footer-list li {
-  margin: 6px 0;
-  color: var(--ink-700);
-}
-
+.footer-list li { margin: 6px 0; color: var(--ink-700); }
 .footer-list a {
   color: var(--ink-900);
   text-decoration: none;
@@ -752,6 +779,26 @@ header {
   transition: border-color .2s ease;
 }
 .footer-list a:hover { border-color: var(--brand-amber); }
+
+/* Social */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.18);
+}
 
 /* ================= Social icons ========================= */
 .social-icons {
@@ -854,13 +901,13 @@ header {
 /* ----- Chips row (reuses your .chip style) ----- */
 .chip-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin: 12px 0 8px; }
 
-/* ----- OUR BREADS PAGE ----- */
+/* ----- ======================= OUR BREADS ========== PAGE ----- */
 /* Breads hero base */
 #breads-hero {
-  margin: 0;                /* remove the white bar */
-  border-radius: 0;         /* kill the curve */
-  overflow: hidden;         /* clean edges */
-  box-shadow: none;         /* no card shadow on a full-bleed hero */
+  margin: 0;               
+  border-radius: 0;        
+  overflow: hidden;         
+  box-shadow: none;         
   position: relative;
 }
 
@@ -930,7 +977,7 @@ header {
 
 
 
-/* ----- Menu grid ----- */
+/* ============== Menu grid that shows the bread after hero ============ */
 
 .menu-title {
   font-family: 'Courgette','Georgia',serif; text-align:center; font-size:2rem; margin:0 0 16px;
@@ -941,7 +988,8 @@ header {
 @media (min-width:768px){ .menu-grid{ grid-template-columns:repeat(3,1fr);} }
 .menu-card {
   background: var(--card-bg); border-radius:14px; overflow:hidden;
-  box-shadow:0 8px 24px rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.04);
+  box-shadow:  0 0 3px var(--brand-amber),   
+    0 10px 28px rgba(0,0,0,.08); border:1px solid rgba(0,0,0,.04);
   display:flex; flex-direction:column;
 }
 .menu-card img { width:100%; height:200px; object-fit:cover; display:block; }
@@ -1087,8 +1135,12 @@ header {
 }
 @media (min-width:900px){ .contact-wrap{ grid-template-columns:1.1fr .9fr; } }
 .contact-form, .contact-side {
-  background: var(--card-bg); border:1px solid rgba(0,0,0,.05); border-radius:16px;
-  box-shadow:0 10px 28px rgba(0,0,0,.08); padding:18px;
+  background: var(--card-bg); 
+  border:1px solid rgba(0,0,0,.05); 
+  border-radius:16px;
+  box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
+    0 10px 28px rgba(0,0,0,.08);
+  padding:18px;
 }
 .fld { display:grid; gap:6px; margin-bottom:12px; }
 .fld label { font-weight:700; }
@@ -1103,4 +1155,151 @@ header {
 .contact-side .card-title { margin-top:0; }
 .contact-social a { color:var(--ink-900); text-decoration:none; border-bottom:1px solid transparent; }
 .contact-social a:hover { border-color: var(--brand-amber); }
+
+/* MENU PAGE */
+
+#cakes h2 {
+  font-family: 'Courgette', 'Georgia', serif;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 16px;
+}
+#cakes h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  background: var(--brand-amber);
+  border-radius: 999px;
+  margin: 8px auto 0;
+}
+
+#cakes .section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ink-700);
+  max-width: 700px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+#cakes, #beverages, #coffee, #breakfast {
+  display: grid;
+  padding: 44px 20px;
+  gap: 18px;
+  grid-template-columns: 1fr;        /* 1 col on mobile */
+  justify-content: center;           /* center the grid */
+  padding-left: 16px; 
+  padding-right: 16px;               /* match site gutters */
+}
+
+@media (min-width: 768px) {
+  #cakes, #beverages, #coffee, #breakfast {
+    grid-template-columns: repeat(3, minmax(0, 340px));
+  }
+}
+
+/* Section headers span full width and stay centered */
+#cakes > .menu-item:first-child,
+#beverages > .menu-wrap,
+#coffee > .menu-wrap,
+#breakfast > .menu-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 6px;
+}
+
+/* Section title + subtitle (matches site look) */
+.section-title {
+  font-family: 'Courgette','Georgia',serif;
+  font-size: 2rem;
+  margin: 0 0 6px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  background: var(--brand-amber);
+  border-radius: 999px;
+  margin: 8px auto 0;
+}
+   
+.section-subtitle {
+  color: var(--ink-700);
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+/* Make each menu-item a card (no HTML changes needed) */
+#cakes .menu-item:not(:first-child),
+#beverages .menu-item,
+#coffee .menu-item,
+#breakfast .menu-item {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.04);
+  box-shadow:
+    0 0 3px var(--brand-amber),      /* thin amber ring */
+    0 10px 28px rgba(0,0,0,.08);
+  display: block;
+  padding: 14px;
+}
+
+/* Image goes edge-to-edge at the top of the card */
+.menu-hero-img {
+  width: calc(100% + 28px);
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: -14px -14px 8px;           /* escape padding so image touches edges */
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}
+
+/* Card text */
+.item-title { 
+  margin: 2px 0; 
+  font-size: 1.15rem; 
+  color: var(--ink-900); 
+  font-weight: 800; 
+}
+
+.item-desc  { margin: 0; color: var(--ink-700); line-height: 1.55; }
+.item-price { margin-top: 4px; font-weight: 800; color: var(--brand-brown); }
+
+/* Mobile polish: keep images pleasant ratio */
+@media (max-width: 560px) {
+  .menu-hero-img { height: auto; aspect-ratio: 4 / 3; }
+}
+
+
+#coffee .menu-wrap {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;           
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5 16px;                       /* fix here a padding issue i had before */
+}
+
+@media (min-width: 768px) {
+  #coffee .menu-wrap {
+    grid-template-columns: repeat(3, minmax(0, 340px)); /* 3-up */
+  }
+}
+
+/* Headline row spans across all columns */
+#coffee .menu-wrap > .section-title,
+#coffee .menu-wrap > .section-subtitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+
+
 
