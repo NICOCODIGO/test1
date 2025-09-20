@@ -678,11 +678,8 @@ newsletter-form button {
   background: #d69500; /* darker amber */
 }
 
-/* ================================================================ */
-
-/* FOOTER */
-/* FOOTER (matches About/Reviews look) */
-#site-footer {
+/* ==================/* FOOTER ============================================= */
+#site-footer { /* matches About/Reviews look */
   background: linear-gradient(180deg, #fff 0%, #fff7e0 100%);
   padding: 64px 20px;
   color: var(--ink-900);
