@@ -1,4 +1,17 @@
 /* GLOBAL */
+
+/* BELOW IS TO INSERT THE CUSTOM FONT, AND THEN WORK 
+ON font-family classes */
+@font-face {
+  font-family: Puffberry;
+  src: url(fonts/Puffberry-Demo.ttf);
+}
+
+@font-face {
+  font-family: lovelybakery;
+  src: url(fonts/Lovely\ Bakery.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -184,6 +197,7 @@ header {
 }
 
 #hero .hero-lede {
+  font-family: lovelybakery, Arial, sans-serif;
   font-size: clamp(1rem, 2vw, 1.15rem);
   color: rgba(255, 255, 255, .92);
   line-height: 1.6;
@@ -306,6 +320,7 @@ header {
 
 
 .about-lede {
+  font-family: lovelybakery, Arial, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--ink-700);
@@ -405,6 +420,7 @@ header {
 }
 
 .gallery-card h3 {
+  font-family: lovelybakery, Arial, sans-serif;
   margin: 12px 0 6px;
   font-size: 1.2rem;
   color: var(--ink-900);
@@ -423,6 +439,7 @@ header {
   border-radius: 10px;
 }
 .gallery-lede {
+  font-family: lovelybakery, Arial, sans-serif;
   max-width: 600px;
   margin: 0 auto 32px;
   font-size: 1.1rem;
@@ -456,7 +473,10 @@ header {
   margin: 8px auto 0;
 }
 
+
+
 .cake-lede {
+  font-family: lovelybakery, Arial, sans-serif;
   font-size: 1.1rem;
   color: var(--ink-700);
   max-width: 700px;
@@ -483,13 +503,14 @@ header {
   background: var(--card-bg);
   border-radius: 14px;
   padding: 20px;
-  text-align: left;
+  text-align: center;
   box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
     0 10px 28px rgba(0,0,0,.08);
   border: 1px solid rgba(0, 0, 0, .04);
 }
 
 .cake-card h3 {
+  font-family: lovelybakery, Arial, sans-serif;
   margin-top: 12px;
   font-size: 1.3rem;
   color: var(--ink-900);
@@ -513,7 +534,7 @@ header {
 /* =================== REVIEWS  ==========================*/
 #reviews {
   background: linear-gradient(180deg, #fff7e0 0%, #fff 100%);
-  padding: 64px 20px;
+  padding: 6px 20px;
 }
 
 #reviews h2 {
@@ -636,6 +657,7 @@ header {
 }
 
 .newsletter-lede {
+  font-family: lovelybakery, Arial, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--ink-700);
@@ -885,7 +907,7 @@ header {
 .section-hero-lite h1 {
   font-family: 'Courgette','Georgia',serif; margin: 0 0 6px; font-size: 2.2rem;
 }
-.section-hero-lite .sub { color: var(--ink-700); font-size: 1.05rem; }
+
 
 /* Alternate backgrounds to keep the flow */
 .section-cream-to-white { background: linear-gradient(180deg, #fff7e0 0%, #fff 100%); padding: 64px 20px; }
@@ -1049,7 +1071,9 @@ header {
   position: relative; /* ensure text is above overlay */
   z-index: 2;
 }
+
 .section-hero-lite .sub {
+  font-family: lovleybakery, Arial, sans-serif;
   font-size: clamp(1rem, 2vw, 1.1rem);
   max-width: 60ch;
   margin: 0 auto;
@@ -1168,6 +1192,7 @@ header {
 }
 
 #cakes .section-subtitle {
+  font-family: lovelybakery, Arial, sans-serif;
   text-align: center;
   font-size: 1.1rem;
   color: var(--ink-700);
@@ -1252,16 +1277,26 @@ header {
   border-bottom: 1px solid rgba(0,0,0,.04);
 }
 
-/* Card text */
-.item-title { 
-  margin: 2px 0; 
-  font-size: 1.15rem; 
-  color: var(--ink-900); 
-  font-weight: 800; 
+.item-title {
+  font-family: lovelybakery, Arial, sans-serif;
+  text-align: center;
+  margin: 2px 0;
+  font-size: 1.15rem;
+  color: var(--ink-900);
+  font-weight: 800;
 }
 
-.item-desc  { margin: 0; color: var(--ink-700); line-height: 1.55; }
-.item-price { margin-top: 4px; font-weight: 800; color: var(--brand-brown); }
+.item-desc  { 
+  margin: 0; 
+  color: var(--ink-700); 
+  line-height: 1.55; 
+}
+ 
+.item-price { 
+  margin-top: 4px; 
+  font-weight: 800; 
+  color: var(--brand-brown); 
+}
 
 /* Mobile polish: keep images pleasant ratio */
 @media (max-width: 560px) {
