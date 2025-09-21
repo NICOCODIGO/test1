@@ -284,7 +284,7 @@ header {
   box-shadow:  0 0 3px var(--brand-amber),   /* #f8b400 ring */
     0 10px 28px rgba(0,0,0,.08);
   padding: 28px 24px;
-  text-align: left;
+  text-align: center;
   position: relative;
 }
 
@@ -301,8 +301,9 @@ header {
   height: 4px;
   background: var(--brand-amber);
   border-radius: 999px;
-  margin-top: 8px;
+  margin: 8px auto 0;
 }
+
 
 .about-lede {
   font-size: 1.1rem;
@@ -311,15 +312,7 @@ header {
   margin: 0 0 18px;
 }
 
-.about-list {
-  margin: 0 0 22px;
-  padding-left: 20px;
-  color: var(--ink-700);
-}
 
-.about-list li {
-  margin: 6px 0;
-}
 
 .about-stats {
   display: grid;
