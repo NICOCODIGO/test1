@@ -1246,6 +1246,7 @@ header {
 }
    
 .section-subtitle {
+  font-family: lovelybakery, Arial, sans-serif;
   color: var(--ink-700);
   font-size: 1.05rem;
   margin: 0 0 10px;
@@ -1256,6 +1257,7 @@ header {
 #beverages .menu-item,
 #coffee .menu-item,
 #breakfast .menu-item {
+  text-align: center;
   background: var(--card-bg);
   border-radius: 14px;
   overflow: hidden;
